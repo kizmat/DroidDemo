@@ -1,5 +1,6 @@
 package com.tribe9.droiddemo;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,8 +16,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         buttonMenu();
+        playmusic();
     }
 
+    // Button Control block, sets up onClick listeners for every button
     private void buttonMenu() {
 
         // P1 Button onClick Listener, Popular Movies
@@ -80,6 +84,38 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    // Background Music
+
+    private void playmusic() {
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.aggraintro);
+        mediaPlayer.setLooping(true);
+        mediaPlayer.setVolume(80, 80);
+        mediaPlayer.start();
+        //setImageRotateListener();
+    }
+
+    // Stops Music if app is closed / paused
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mediaPlayer.pause();
+    }
+
+    // Resumes Music loop if app is resumed
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mediaPlayer.start();
+    }
+
+    // Release music player on App Destruction
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mediaPlayer.release();
     }
 
 }
