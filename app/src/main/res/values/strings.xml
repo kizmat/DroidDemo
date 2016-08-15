@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">DroidDemo</string>
+    <string name="p1">Popular Movies</string>
+    <string name="p2">Stock Hawk</string>
+    <string name="p3">Build it Bigger</string>
+    <string name="p4">Make Your App Material</string>
+    <string name="p5">Go Ubiquitous</string>
+    <string name="p6">Capstone</string>
+    <string name="titleHeader">App Portfolio</string>
+
+    // App Launching messages
+
+    <string name="p1Launch">Launching Popular Movies</string>
+    <string name="p2Launch">Launching Stock Hawk</string>
+    <string name="p3Launch">Launching Build it Bigger</string>
+    <string name="p4Launch">Launching Make Your App Material</string>
+    <string name="p5Launch">Launching Go Ubiquitous</string>
+    <string name="p6Launch">Launching Capstone</string>
+
+</resources>
