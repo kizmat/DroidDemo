@@ -94,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
         mediaPlayer.setLooping(true);
         mediaPlayer.setVolume(80, 80);
         mediaPlayer.start();
-        //setImageRotateListener();
     }
 
     // Stops Music if app is closed / paused
